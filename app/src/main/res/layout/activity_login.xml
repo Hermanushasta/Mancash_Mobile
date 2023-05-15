@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="345dp"
+        android:layout_height="195dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/welcomeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/welcome_back"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/username_button"
+        android:layout_below="@+id/welcomeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/username_button"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/password_button"
+        android:layout_below="@+id/username_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_centerHorizontal="true"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/password_button"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_button"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingStart="70dp"
+        android:text="@string/rememberMe_button"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/forgotPwLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_button"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingStart="70dp"
+        android:text="@string/forgotpw_link"
+        android:textColor="@color/red"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_below="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:width="230dp"
+        android:text="@string/login_button"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="13dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/dontHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/donthaveanaccount"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/signUpLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingStart="70dp"
+        android:text="@string/signup_link"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

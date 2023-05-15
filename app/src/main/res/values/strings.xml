@@ -1,0 +1,44 @@
+<resources>
+
+    //Login Page
+    <string name="app_name">Mancash</string>
+    <string name="welcome_back">Hi, Welcome Back👋</string>
+    <string name="username_button">Username</string>
+    <string name="password_button">Password</string>
+    <string name="rememberMe_button">Remember Me</string>
+    <string name="forgotpw_link">Forgot Password?</string>
+    <string name="login_button">Login</string>
+    <string name="donthaveanaccount">Dont have an account?</string>
+    <string name="signup_link">Sign up</string>
+
+    //Register Page
+    <string name="create_account">Create Account</string>
+    <string name="name_register">Name</string>
+    <string name="username_register">Username</string>
+    <string name="phoneNumber_register">Phone Number</string>
+    <string name="password_register">Password</string>
+    <string name="confirm_register">Confirm Password</string>
+    <string name="signUp_register">Sign Up</string>
+
+    //Change Password Page
+    <string name="change_password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="change_password_btn">Change</string>
+
+    //Forgot Password Page
+    <string name="forgot_password_title">Forgot Password?</string>
+    <string name="enter_phone_number">Enter Your Your Phone Number</string>
+    <string name="phoneNumber_changePassword">Phone Number</string>
+    <string name="back_to_sign">Back to Sign</string>
+    <string name="send_button">Send</string>
+
+    //Navigation Button
+    <string name="home_nav">Home</string>
+    <string name="add_nav">Add</string>
+    <string name="history_nav">History</string>
+    <string name="settings_nav">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

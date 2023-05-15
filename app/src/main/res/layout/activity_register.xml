@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="345dp"
+        android:layout_height="195dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/createAccount_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/create_account"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/name_register"
+        android:layout_below="@+id/createAccount_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/name_register"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/username_register"
+        android:layout_below="@+id/name_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/username_register"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/phoneNumber_register"
+        android:layout_below="@+id/username_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/phoneNumber_register"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/password_register"
+        android:layout_below="@+id/phoneNumber_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/password_register"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/confirmPassword_register"
+        android:layout_below="@+id/password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:height="50dp"
+        android:width="320dp"
+        android:text="@string/confirm_register"
+        android:background="@drawable/green_border"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:paddingLeft="20dp"/>
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:height="50dp"
+        android:width="200dp"
+        android:layout_below="@+id/confirmPassword_register"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
+        android:text="@string/signUp_register" />
+
+
+</RelativeLayout>
