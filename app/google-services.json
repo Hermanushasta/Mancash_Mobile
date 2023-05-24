@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "110325680871",
+    "project_id": "mancash-mobile",
+    "storage_bucket": "mancash-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110325680871:android:09d344faff8fc4ceeff042",
+        "android_client_info": {
+          "package_name": "org.d3if0043.mancashmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110325680871-2guqbd0udmbrov1fh2nevpcqj2lniabk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC29SjAcDKYVnkk0O9GZmCuyva2L3znybo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110325680871-2guqbd0udmbrov1fh2nevpcqj2lniabk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -29,14 +29,14 @@
         android:textColor="@color/black"/>
 
     <EditText
-        android:id="@+id/username_button"
+        android:id="@+id/email_edtLogin"
         android:layout_below="@+id/welcomeBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:height="50dp"
         android:width="320dp"
-        android:text="@string/username_button"
+        android:text="@string/email_register"
         android:background="@drawable/green_border"
         android:textColor="@color/gray"
         android:fontFamily="@font/poppinssemibold"
@@ -45,8 +45,8 @@
         android:paddingLeft="20dp"/>
 
     <EditText
-        android:id="@+id/password_button"
-        android:layout_below="@+id/username_button"
+        android:id="@+id/password_edtLogin"
+        android:layout_below="@+id/email_edtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
@@ -65,14 +65,14 @@
         android:id="@+id/checkboxRememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_button"
+        android:layout_below="@+id/password_edtLogin"
         android:layout_marginStart="40dp" />
 
     <TextView
         android:id="@+id/rememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_button"
+        android:layout_below="@+id/password_edtLogin"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -87,7 +87,7 @@
         android:id="@+id/forgotPwLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_button"
+        android:layout_below="@+id/password_edtLogin"
         android:layout_marginStart="150dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppinssemibold"
@@ -134,7 +134,8 @@
         android:paddingStart="70dp"
         android:text="@string/signup_link"
         android:textColor="@color/green"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:onClick="onClick"/>
 
 
 </RelativeLayout>
