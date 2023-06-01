@@ -16,13 +16,12 @@
     <string name="name_register">Name</string>
     <string name="username_register">Username</string>
     <string name="phoneNumber_register">Phone Number</string>
-    <string name="password_register">Password</string>
+    <string name="password_register">Enter your password</string>
     <string name="confirm_register">Confirm Password</string>
     <string name="signUp_register">Sign Up</string>
-    <string name="email_register">Email</string>
+    <string name="email_register">Enter your email</string>
     <string name="alreadyhaveaccount">Already Have an Account?</string>
     <string name="login_link">Login</string>
-
 
     //Change Password Page
     <string name="change_password">Change Password</string>
@@ -42,7 +41,6 @@
     <string name="add_nav">Add</string>
     <string name="history_nav">History</string>
     <string name="settings_nav">Settings</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -53,5 +51,41 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    //Add Transaction Page
+    <string name="add_transaction">Add Transaction</string>
+    <string name="add_description">Add Description</string>
+    <string name="nominal">Nominal</string>
+    <string name="date">Date</string>
+    <string name="income_add">Income</string>
+    <string name="expense_add">Expense</string>
+    <string name="save_add">Save</string>
+
+    //Profile Settings
+    <string name="usernameSettings">Username</string>
+    <string name="editProfileInformation">Edit profile information</string>
+    <string name="language">Language</string>
+    <string name="contactUs">Contact us</string>
+    <string name="privacyPolicy">Privacy policy</string>
+    <string name="logoutButton">Logout</string>
+
+    //Home Page
+    <string name="incomeSaldo">Income</string>
+    <string name="expenseSaldo">Expense</string>
+    <string name="incomeSort">Income</string>
+    <string name="expenseSort">Expense</string>
+    <string name="transactions">Transactions</string>
+    <string name="allSort">All</string>
+    
+    <string-array name="sorting">
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+
+
+
+
+
 
 </resources>

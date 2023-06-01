@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,8 +7,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="345dp"
-        android:layout_height="195dp"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
@@ -36,11 +35,10 @@
         android:layout_centerHorizontal="true"
         android:height="50dp"
         android:width="320dp"
-        android:text="@string/email_register"
+        android:hint="@string/email_register"
         android:background="@drawable/green_border"
-        android:textColor="@color/gray"
         android:fontFamily="@font/poppinssemibold"
-        android:textSize="13dp"
+        android:textSize="13sp"
         android:textAllCaps="false"
         android:paddingLeft="20dp"/>
 
@@ -48,14 +46,14 @@
         android:id="@+id/password_edtLogin"
         android:layout_below="@+id/email_edtLogin"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="13dp"
         android:layout_centerHorizontal="true"
         android:height="50dp"
         android:width="320dp"
-        android:text="@string/password_button"
+        android:hint="@string/password_button"
+        android:inputType="textPassword"
         android:background="@drawable/green_border"
-        android:textColor="@color/gray"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="13dp"
         android:textAllCaps="false"
@@ -105,6 +103,7 @@
         android:width="230dp"
         android:text="@string/login_button"
         android:backgroundTint="@color/green"
+        android:textColor="@color/white"
         android:fontFamily="@font/poppinsbold"
         android:textSize="13dp"
         android:textAlignment="center"/>
