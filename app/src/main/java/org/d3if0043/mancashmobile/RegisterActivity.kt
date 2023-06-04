@@ -52,7 +52,7 @@ class RegisterActivity : AppCompatActivity() {
 
             //validasi paanjang password
             if (password.length < 6) {
-                binding.passwordRegister.error = "Password Minimal 6 Karakter"
+                binding.passwordRegister.error = ""
                 binding.passwordRegister.requestFocus()
                 return@setOnClickListener
             }

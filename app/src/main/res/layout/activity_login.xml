@@ -40,7 +40,8 @@
         android:fontFamily="@font/poppinssemibold"
         android:textSize="13sp"
         android:textAllCaps="false"
-        android:paddingLeft="20dp"/>
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
 
     <EditText
         android:id="@+id/password_edtLogin"
@@ -55,9 +56,10 @@
         android:inputType="textPassword"
         android:background="@drawable/green_border"
         android:fontFamily="@font/poppinssemibold"
-        android:textSize="13dp"
+        android:textSize="13sp"
         android:textAllCaps="false"
-        android:paddingLeft="20dp"/>
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
 
     <CheckBox
         android:id="@+id/checkboxRememberMe"
@@ -72,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password_edtLogin"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppinssemibold"
@@ -87,12 +89,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password_edtLogin"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/poppinssemibold"
         android:paddingStart="70dp"
         android:text="@string/forgotpw_link"
         android:textColor="@color/red"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/loginButton"
@@ -109,7 +112,7 @@
         android:textAlignment="center"/>
 
     <TextView
-        android:id="@+id/dontHaveAccount"
+        android:id="@+id/backToSignLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginButton"

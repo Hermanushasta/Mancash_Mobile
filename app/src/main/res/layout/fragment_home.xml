@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -13,7 +14,8 @@
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewIncome"
@@ -34,13 +36,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppinsbold"
             android:text="@string/incomeSaldo"
             android:textAllCaps="true"
             android:textColor="@color/green"
-            android:textSize="25dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -48,7 +49,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/poppinssemibold"
             android:text="Rp 5.250.000"
@@ -80,13 +80,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppinsbold"
             android:text="@string/expenseSaldo"
             android:textAllCaps="true"
             android:textColor="@color/red"
-            android:textSize="25dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -94,7 +93,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/poppinssemibold"
             android:text="Rp 1.250.000"
@@ -140,7 +138,7 @@
         android:id="@+id/incomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
@@ -156,7 +154,7 @@
         android:id="@+id/expenseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="94dp"
         android:layout_weight="1"

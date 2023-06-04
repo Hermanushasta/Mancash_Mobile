@@ -31,8 +31,8 @@
 
     //Forgot Password Page
     <string name="forgot_password_title">Forgot Password?</string>
-    <string name="enter_phone_number">Enter Your Your Phone Number</string>
-    <string name="phoneNumber_changePassword">Phone Number</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="email_changePassword">Enter Your Email</string>
     <string name="back_to_sign">Back to Sign</string>
     <string name="send_button">Send</string>
 

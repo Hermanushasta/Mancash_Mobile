@@ -6,7 +6,7 @@
     tools:context=".AddFragment">
 
     <TextView
-        android:id="@+id/addDescription"
+        android:id="@+id/addDescriptionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -18,10 +18,10 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/email_register"
+        android:id="@+id/addDescriptionEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addDescription"
+        android:layout_below="@+id/addDescriptionText"
         android:layout_centerHorizontal="true"
         android:width="320dp"
         android:height="50dp"
@@ -37,7 +37,7 @@
         android:id="@+id/nominal"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_below="@+id/email_register"
+        android:layout_below="@+id/addDescriptionEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:width="320dp"

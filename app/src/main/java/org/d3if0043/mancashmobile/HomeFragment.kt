@@ -13,14 +13,17 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+
+        val sort = resources.getStringArray(R.array.sorting)
+        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.item_dropdown, sort)
+        binding.autoCompleteTextView5.setAdapter(arrayAdapter)
         return binding.root
     }
-
-
 }
