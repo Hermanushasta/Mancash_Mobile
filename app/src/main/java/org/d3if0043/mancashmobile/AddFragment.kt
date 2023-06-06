@@ -1,59 +1,111 @@
 package org.d3if0043.mancashmobile
 
+import android.app.DatePickerDialog
 import android.os.Bundle
+import android.text.InputFilter
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.util.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AddFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AddFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var addDescriptionEditText: EditText
+    private lateinit var nominalEditText: EditText
+    private lateinit var saveButton: Button
+    private lateinit var transactionsRef: DatabaseReference
+    private lateinit var datePicker: EditText
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    // Konstruktor tambahan dengan parameter description dan amount
+    private data class Transaction(
+        val description: String = "",
+        val amount: Float = 0.0f
+    )
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add, container, false)
+        val view = inflater.inflate(R.layout.fragment_add, container, false)
+
+        datePicker = view.findViewById(R.id.datePicker)
+        datePicker.setOnClickListener {
+            showDatePickerDialog()
+        }
+
+        // Inisialisasi Firebase Database dan referensi ke child "transactions"
+        val database = FirebaseDatabase.getInstance()
+        val databaseReference = database.reference
+        transactionsRef = databaseReference.child("transactions")
+
+        // Inisialisasi view yang diperlukan
+        addDescriptionEditText = view.findViewById(R.id.addDescriptionEditText)
+        nominalEditText = view.findViewById(R.id.nominal)
+        saveButton = view.findViewById(R.id.saveButton)
+
+        // Set input filter untuk nominalEditText
+        nominalEditText.filters = arrayOf(InputFilter { source, _, _, _, _, _ ->
+            // Mengizinkan hanya angka dan desimal
+            val regex = Regex("[0-9]+(\\.[0-9]{0,2})?")
+            if (source.isEmpty() || regex.matches(source)) {
+                null // Membiarkan input diterima
+            } else {
+                "" // Mengabaikan input yang tidak sesuai
+            }
+        })
+
+        // Menambahkan listener untuk tombol save
+        saveButton.setOnClickListener {
+            val description = addDescriptionEditText.text.toString()
+            val amountString = nominalEditText.text.toString()
+            val amount = amountString.toFloat()
+
+            // Membuat objek Transaction
+            val transaction = Transaction(description, amount)
+
+            // Menyimpan data ke Firebase Database
+            transactionsRef.push().setValue(transaction)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(activity, "Data berhasil disimpan", Toast.LENGTH_SHORT)
+                            .show()
+                    } else {
+                        Toast.makeText(activity, "Gagal menyimpan data", Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AddFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun showDatePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
+            val selectedDate = Calendar.getInstance()
+            selectedDate.set(selectedYear, selectedMonth, selectedDay)
+
+            val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+            val formattedDate = dateFormat.format(selectedDate.time)
+            datePicker.setText(formattedDate)
+        }, year, month, day)
+
+        datePickerDialog.show()
     }
 }
+
+
+
+
+
+

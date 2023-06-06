@@ -76,16 +76,10 @@
     <string name="expenseSort">Expense</string>
     <string name="transactions">Transactions</string>
     <string name="allSort">All</string>
-    
+
     <string-array name="sorting">
         <item>Week</item>
         <item>Month</item>
         <item>Year</item>
     </string-array>
-
-
-
-
-
-
 </resources>
