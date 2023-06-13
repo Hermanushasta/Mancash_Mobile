@@ -24,6 +24,13 @@ class LoginActvity : AppCompatActivity() {
         binding.signUpLink.setOnClickListener {
             val intent = Intent (this, RegisterActivity::class.java)
             startActivity(intent)
+
+        }
+
+        binding.forgotPwLink.setOnClickListener {
+            val intent = Intent (this, ResetPasswordActivity::class.java)
+            startActivity(intent)
+
         }
 
         binding.loginButton.setOnClickListener {

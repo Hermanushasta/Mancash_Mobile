@@ -22,7 +22,7 @@ class ResetPasswordActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.backToSignLink.setOnClickListener {
-            val intent = Intent(this, ResetPasswordActivity::class.java)
+            val intent = Intent(this, LoginActvity::class.java)
             startActivity(intent)
         }
 

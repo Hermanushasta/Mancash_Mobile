@@ -76,10 +76,40 @@
     <string name="expenseSort">Expense</string>
     <string name="transactions">Transactions</string>
     <string name="allSort">All</string>
-
+    
     <string-array name="sorting">
         <item>Week</item>
         <item>Month</item>
         <item>Year</item>
     </string-array>
+
+    //Privacy Policy / Copyright
+    <string name="copyright">User privacy is important to us. In this privacy policy, we explain how your data is collected, used, and disclosed when you use our financial management application. We aim to protect your privacy and respect your needs and preferences regarding the use of your personal data.\n
+
+1. Information We Collect:
+a. Personal Information: We may collect personal information you provide when registering or using our application. This may include your name, email address, home address, or other relevant information.
+b. Financial Information: To provide financial management functions, we may request and collect information about bank accounts, financial transactions, or relevant credit card details. We will securely process this information and only use it for the purposes of our application.
+
+2. Use of Information:
+a. Application Functionality: The information we collect is used to provide features and functions of our application to you. This includes financial monitoring, budget management, or financial recommendations based on the data you provide.
+b. Communication: We may use your information to send updates, notifications, or other important information related to our application. c. Analysis and Improvement: The information we collect may be used for statistical analysis, product development, or improving our application. However, this data will be presented in aggregated and anonymized form to maintain your privacy.
+
+3. Data Storage:
+a. Security: We take reasonable security measures to protect your personal data from unauthorized access, use, or disclosure. We use encryption methods and other security protocols to safeguard your data when stored in our systems.
+b. Storage: We will only retain your data for as long as necessary for the purposes described in this policy or as required by applicable law.
+
+4. Information Disclosure:
+a. Third Parties: We will not disclose your personal information to third parties without your consent, except where required by law or necessary for data processing purposes in accordance with this policy.
+b. Service Providers: In some cases, we may use third-party service providers to assist in the operation of our application. However, they will only have limited access to your data and are required to maintain the confidentiality of such information.
+
+5. Policy Updates:
+We may update this privacy policy from time to time. If there are significant changes in how we collect, use, or disclose your information, we will notify you through notifications within the application or other appropriate communication methods.
+We encourage you to periodically review this privacy policy and contact us if you have any questions or concerns about your privacy.
+Thank you for using our financial management application.</string>
+
+    //Contact Us Page
+    <string name="phoneNumberContactUs">+621234567890</string>
+    <string name="emailContactUs">mancash@gmail.com</string>
+
+
 </resources>

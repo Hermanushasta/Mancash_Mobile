@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageWallpaper"
+                android:layout_width="411dp"
+                android:layout_height="416dp"
+                android:layout_marginTop="-200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rectangle_wallpaper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profilePhotos"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/baseline_person_outline_24"
+                app:layout_constraintBottom_toBottomOf="@+id/imageWallpaper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageWallpaper" />
+
+            <TextView
+                android:id="@+id/usernameContactUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="157dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="158dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center_horizontal"
+                android:text="@string/usernameSettings"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profilePhotos" />
+
+            <TextView
+                android:id="@+id/phoneContactUsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="157dp"
+                android:layout_marginEnd="158dp"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center_horizontal"
+                android:text="@string/phoneNumberContactUs"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/usernameContactUs" />
+
+            <TextView
+                android:id="@+id/emailContactUsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="157dp"
+                android:layout_marginEnd="158dp"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center_horizontal"
+                android:text="@string/emailContactUs"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneContactUsText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
