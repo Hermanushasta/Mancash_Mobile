@@ -10,8 +10,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -19,7 +19,7 @@ class AddFragment : Fragment() {
     private lateinit var addDescriptionEditText: EditText
     private lateinit var nominalEditText: EditText
     private lateinit var saveButton: Button
-    private lateinit var transactionsRef: DatabaseReference
+    private lateinit var transactionsCollection: CollectionReference
     private lateinit var datePicker: EditText
 
     // Konstruktor tambahan dengan parameter description dan amount
@@ -40,10 +40,9 @@ class AddFragment : Fragment() {
             showDatePickerDialog()
         }
 
-        // Inisialisasi Firebase Database dan referensi ke child "transactions"
-        val database = FirebaseDatabase.getInstance()
-        val databaseReference = database.reference
-        transactionsRef = databaseReference.child("transactions")
+        // Inisialisasi Firestore Database dan referensi ke collection "transactions"
+        val db = FirebaseFirestore.getInstance()
+        transactionsCollection = db.collection("transactions")
 
         // Inisialisasi view yang diperlukan
         addDescriptionEditText = view.findViewById(R.id.addDescriptionEditText)
@@ -70,14 +69,13 @@ class AddFragment : Fragment() {
             // Membuat objek Transaction
             val transaction = Transaction(description, amount)
 
-            // Menyimpan data ke Firebase Database
-            transactionsRef.push().setValue(transaction)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(activity, "Data berhasil disimpan", Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(activity, "Gagal menyimpan data", Toast.LENGTH_SHORT).show()
-                    }
+            // Menyimpan data ke Firestore Database
+            transactionsCollection.add(transaction)
+                .addOnSuccessListener {
+                    Toast.makeText(activity, "Data berhasil disimpan", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(activity, "Gagal menyimpan data: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
         }
 
