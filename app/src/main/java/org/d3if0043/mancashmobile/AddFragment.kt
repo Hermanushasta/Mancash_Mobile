@@ -74,8 +74,7 @@ class AddFragment : Fragment() {
             transactionsRef.push().setValue(transaction)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(activity, "Data berhasil disimpan", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(activity, "Data berhasil disimpan", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(activity, "Gagal menyimpan data", Toast.LENGTH_SHORT).show()
                     }
@@ -103,9 +102,3 @@ class AddFragment : Fragment() {
         datePickerDialog.show()
     }
 }
-
-
-
-
-
-
