@@ -14,6 +14,8 @@ import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.*
+import android.widget.RadioButton
+import android.widget.RadioGroup
 
 class AddFragment : Fragment() {
     private lateinit var addDescriptionEditText: EditText
@@ -21,6 +23,9 @@ class AddFragment : Fragment() {
     private lateinit var saveButton: Button
     private lateinit var transactionsCollection: CollectionReference
     private lateinit var datePicker: EditText
+
+    private lateinit var categoryRadioGroup: RadioGroup
+    private lateinit var selectedCategory: String
 
     // Konstruktor tambahan dengan parameter description dan amount
     private data class Transaction(
@@ -60,6 +65,12 @@ class AddFragment : Fragment() {
             }
         })
 
+        categoryRadioGroup = view.findViewById(R.id.radioGroup)
+        categoryRadioGroup.setOnCheckedChangeListener { _, checkedId ->
+            val radioButton = view.findViewById<RadioButton>(checkedId)
+            selectedCategory = radioButton.text.toString()
+        }
+
         // Menambahkan listener untuk tombol save
         saveButton.setOnClickListener {
             val description = addDescriptionEditText.text.toString()
@@ -67,7 +78,7 @@ class AddFragment : Fragment() {
             val amount = amountString.toFloat()
 
             // Membuat objek Transaction
-            val transaction = Transaction(description, amount)
+            val transaction = Transaction(description, amount, )
 
             // Menyimpan data ke Firestore Database
             transactionsCollection.add(transaction)
